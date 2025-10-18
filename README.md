@@ -6,17 +6,8 @@
 <title>MBTI Quiz — Lối rẽ tuổi thiếu niên</title>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <style>
-
-/* Embedded custom font */
-@font-face {
-  font-family: 'CustomPixel';
-  src: url('assets/0307-LNTH-TwistyPixel.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-body, button { font-family: 'TwistyPixel', monospace; }
-
+@font-face { font-family: 'CustomPixel'; src: url('assets/0307-LNTH-TwistyPixel.ttf') format('truetype'); font-weight: normal; font-style: normal; font-display: swap; }
+body, button { font-family: 'CustomPixel', monospace; margin:0; color:#2b1323; }
 :root{--panel:#ffeef8;--accent:#ff7ab6;--muted:#7a6b78;}
 html,body{height:100%;background:linear-gradient(180deg,#fff0f6,#ffeef4);}
 .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
@@ -36,17 +27,9 @@ h1{margin:0;font-size:18px}
 .progress{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:12px;color:var(--muted)}
 .result{margin-top:12px;padding:12px;border-radius:8px;background:#fff0fb;border:2px dashed rgba(82,18,51,0.06);color:#521233}
 .content-overlay { background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); border-radius: 12px; padding: 12px; }
-@media(max-width:720px){.answers{flex-direction:column}}
 body{background-image:url('assets/bg.jpg');background-size:cover;}
-
-/* content overlay to improve text readability */
-.content-overlay {
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(6px);
-  border-radius: 12px;
-  padding: 12px;
-}
-
+.music-btn{position:fixed;top:12px;right:12px;padding:6px 10px;border-radius:8px;background:#ffd6eb;border:none;cursor:pointer;}
+@media(max-width:720px){.answers{flex-direction:column}}
 </style>
 </head>
 <body>
