@@ -1,27 +1,222 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>MBTI Quiz — Lối rẽ tuổi thiếu niên</title>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Quiz Du Lịch Châu Mỹ</title>
+
 <style>
 
-/* Embedded custom font */
-@font-face {
-  font-family: 'CustomPixel';
-  src: url('assets/0307-LNTH-TwistyPixel.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+body{
+font-family: Arial;
+background:#f4f6f9;
+padding:30px;
 }
-body, button { font-family: 'TwistyPixel', monospace; }
 
-:root{--panel:#ffeef8;--accent:#ff7ab6;--muted:#7a6b78;}
-html,body{height:100%;background:linear-gradient(180deg,#fff0f6,#ffeef4);}
-.wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
-.game{width:940px;max-width:98vw;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.8));border-radius:14px;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,0.07)}
-.pixel-logo{display:flex;gap:12px;align-items:center}
+.quiz-box{
+background:white;
+padding:25px;
+border-radius:10px;
+max-width:800px;
+margin:auto;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h1{
+text-align:center;
+}
+
+.question{
+margin-bottom:20px;
+}
+
+button{
+padding:10px 20px;
+font-size:16px;
+cursor:pointer;
+}
+
+.correct{
+color:green;
+}
+
+.wrong{
+color:red;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="quiz-box">
+
+<h1>Quiz Du Lịch Châu Mỹ</h1>
+
+<form id="quiz">
+
+<div class="question">
+<p>1. Thành phố nào nổi tiếng với tượng Nữ thần Tự do?</p>
+<label><input type="radio" name="q1" value="A"> Los Angeles</label><br>
+<label><input type="radio" name="q1" value="B"> New York</label><br>
+<label><input type="radio" name="q1" value="C"> Miami</label>
+</div>
+
+<div class="question">
+<p>2. Thác nước nổi tiếng giữa Mỹ và Canada là gì?</p>
+<label><input type="radio" name="q2" value="A"> Niagara</label><br>
+<label><input type="radio" name="q2" value="B"> Iguazu</label><br>
+<label><input type="radio" name="q2" value="C"> Victoria</label>
+</div>
+
+<div class="question">
+<p>3. Machu Picchu nằm ở quốc gia nào?</p>
+<label><input type="radio" name="q3" value="A"> Peru</label><br>
+<label><input type="radio" name="q3" value="B"> Brazil</label><br>
+<label><input type="radio" name="q3" value="C"> Chile</label>
+</div>
+
+<div class="question">
+<p>4. Las Vegas nổi tiếng với loại hình du lịch gì?</p>
+<label><input type="radio" name="q4" value="A"> Casino</label><br>
+<label><input type="radio" name="q4" value="B"> Du lịch sinh thái</label><br>
+<label><input type="radio" name="q4" value="C"> Leo núi</label>
+</div>
+
+<div class="question">
+<p>5. Cancun là điểm du lịch biển của quốc gia nào?</p>
+<label><input type="radio" name="q5" value="A"> Mexico</label><br>
+<label><input type="radio" name="q5" value="B"> Brazil</label><br>
+<label><input type="radio" name="q5" value="C"> Peru</label>
+</div>
+
+<div class="question">
+<p>6. Tượng Chúa Cứu Thế nằm ở thành phố nào?</p>
+<label><input type="radio" name="q6" value="A"> Rio de Janeiro</label><br>
+<label><input type="radio" name="q6" value="B"> Buenos Aires</label><br>
+<label><input type="radio" name="q6" value="C"> Lima</label>
+</div>
+
+<div class="question">
+<p>7. Grand Canyon nằm ở quốc gia nào?</p>
+<label><input type="radio" name="q7" value="A"> Mỹ</label><br>
+<label><input type="radio" name="q7" value="B"> Canada</label><br>
+<label><input type="radio" name="q7" value="C"> Chile</label>
+</div>
+
+<div class="question">
+<p>8. Thủ đô của Canada là gì?</p>
+<label><input type="radio" name="q8" value="A"> Toronto</label><br>
+<label><input type="radio" name="q8" value="B"> Ottawa</label><br>
+<label><input type="radio" name="q8" value="C"> Vancouver</label>
+</div>
+
+<div class="question">
+<p>9. Thành phố nào được gọi là “thành phố không ngủ”?</p>
+<label><input type="radio" name="q9" value="A"> New York</label><br>
+<label><input type="radio" name="q9" value="B"> Chicago</label><br>
+<label><input type="radio" name="q9" value="C"> Houston</label>
+</div>
+
+<div class="question">
+<p>10. Copacabana là bãi biển nổi tiếng ở đâu?</p>
+<label><input type="radio" name="q10" value="A"> Rio de Janeiro</label><br>
+<label><input type="radio" name="q10" value="B"> Lima</label><br>
+<label><input type="radio" name="q10" value="C"> Havana</label>
+</div>
+
+<div class="question">
+<p>11. Galápagos thuộc quốc gia nào?</p>
+<label><input type="radio" name="q11" value="A"> Ecuador</label><br>
+<label><input type="radio" name="q11" value="B"> Chile</label><br>
+<label><input type="radio" name="q11" value="C"> Argentina</label>
+</div>
+
+<div class="question">
+<p>12. Kênh đào nối Đại Tây Dương và Thái Bình Dương là gì?</p>
+<label><input type="radio" name="q12" value="A"> Kênh đào Panama</label><br>
+<label><input type="radio" name="q12" value="B"> Kênh đào Suez</label><br>
+<label><input type="radio" name="q12" value="C"> Kênh đào Kiel</label>
+</div>
+
+<div class="question">
+<p>13. Thác Iguazu nằm giữa hai quốc gia nào?</p>
+<label><input type="radio" name="q13" value="A"> Brazil & Argentina</label><br>
+<label><input type="radio" name="q13" value="B"> Peru & Chile</label><br>
+<label><input type="radio" name="q13" value="C"> Mexico & Mỹ</label>
+</div>
+
+<div class="question">
+<p>14. Hawaii thuộc quốc gia nào?</p>
+<label><input type="radio" name="q14" value="A"> Mỹ</label><br>
+<label><input type="radio" name="q14" value="B"> Mexico</label><br>
+<label><input type="radio" name="q14" value="C"> Canada</label>
+</div>
+
+<div class="question">
+<p>15. Thành phố nổi tiếng với CN Tower là?</p>
+<label><input type="radio" name="q15" value="A"> Toronto</label><br>
+<label><input type="radio" name="q15" value="B"> Montreal</label><br>
+<label><input type="radio" name="q15" value="C"> Calgary</label>
+</div>
+
+<button type="button" onclick="checkQuiz()">Submit</button>
+
+</form>
+
+<h2 id="result"></h2>
+
+</div>
+
+<script>
+
+function checkQuiz(){
+
+let answers = {
+q1:"B",
+q2:"A",
+q3:"A",
+q4:"A",
+q5:"A",
+q6:"A",
+q7:"A",
+q8:"B",
+q9:"A",
+q10:"A",
+q11:"A",
+q12:"A",
+q13:"A",
+q14:"A",
+q15:"A"
+};
+
+let score = 0;
+
+for(let q in answers){
+
+let selected = document.querySelector(`input[name=${q}]:checked`);
+
+if(selected){
+
+if(selected.value === answers[q]){
+score++;
+selected.parentElement.classList.add("correct");
+}else{
+selected.parentElement.classList.add("wrong");
+}
+
+}
+
+}
+
+document.getElementById("result").innerHTML =
+"Bạn trả lời đúng " + score + "/15 câu";
+
+}
+
+</script>
+
+</body>
+</html>.pixel-logo{display:flex;gap:12px;align-items:center}
 .pixel-block{width:64px;height:64px;background:repeating-linear-gradient(45deg,#ffd6eb,#ffd6eb 8px,#fff 8px,#fff 16px);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#521233;font-weight:900;font-size:20px}
 h1{margin:0;font-size:18px}
 .lead{font-size:11px;color:var(--muted);margin-top:6px}
